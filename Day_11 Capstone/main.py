@@ -14,7 +14,7 @@ card= {"Ace":0,"2":1,"3":2,"4":3,"5":4,"6":5 ,"7":6,"8":7,"9": 8,"10": 9,"Jack":
 deck=[11,2,3,4,5,6,7,8,9,10,10,10,10,]
 def blackjack(x):
     if x==1:
-        print("Blackjack\nYou Win")
+        print("\n\nBlackjack\nYou Win")
         refresh()
     else:
         return
@@ -22,10 +22,13 @@ def blackjack(x):
 dealer=[]
 my_deck=[]
 def refresh():
-    x=eval(input("To continue the game, press any number to continue: "))
-    if(x.isalnum()):
+    x= input("\n\nTo continue the game, press any key to continue: ")
+    if(x.isalnum() or x=="" or x==""):
         dealer.clear()   
         my_deck.clear()
+        for i in range(2):
+            dealer.append(random.choice(list(card.keys())))
+            my_deck.append(random.choice(list(card.keys())))
  
 def count_dealer(hand):
     return hand[0]
@@ -34,14 +37,9 @@ def count(hand):
     
     sum=0
     for i in hand:
-        cardd=deck[card[i]]
-        if cardd=='11':
-            if sum+11<=21:
-                sum+=11
-            else:
-                sum+=1
-        else:
-            sum+=cardd
+        sum+=deck[card[i]]
+    if sum>21 and "Ace" in hand:
+        sum-=10
     if sum==21:
         blackjack(hand==my_deck)
     return sum
@@ -52,28 +50,32 @@ def stand():
     print("dealer Sum: ", count(dealer))
     while count(dealer)<17:
         dealer.append(random.choice(list(card.keys())))
-        print("Dealer draws a card\n")
+        print("\nDealer draws a card\n")
         print("dealers deck is ", print_deck(dealer))
         print("dealer Sum: ", count(dealer))
+        print("\n\n")
         
     deall= count(dealer)
     mecountt= count(my_deck)
-    print("Dealers Cards are:  ",deall)
+     
     if deall>21:
-        print("Dealer Bust\nYou Win")
+        print(" Dealer Bust\nYou Win")
     elif deall>mecountt:
-        print("You Lose")
+        print(" You Lose")
     elif deall<mecountt:
-        print("You Win")
+        print(" You Win")
     else:
-        print("Draw")
+        print(" Draw")
     refresh()
 
 def hit():
     my_deck.append(random.choice(list(card.keys())))
+    
     if count(my_deck)>21:
-        print("You Bust\nYou Lose")
-    refresh()
+        print("\nYour Cards are:  ", print_deck(my_deck))
+        print("Your Sum: ",count(my_deck))
+        print("\n\nYou Bust\nYou Lose")
+        refresh()
 
 print(logo)
          
@@ -85,11 +87,10 @@ for i in range(2):
     my_deck.append(random.choice(list(card.keys())))
 
 def print_deck(deck):
-    for i in deck:
-        print(i)
+    return ' '.join(deck )
 
 while True:
-    print("Dealers Cards are:  ",dealer[0] , ", Hidden")
+    print("\n\n\nDealers Cards are:  ",dealer[0] , ", Hidden")
     print("Dealer Sum: ", count_dealer(dealer))
     print("\nYour Cards are:  ", print_deck(my_deck))
     print("Your Sum: ",count(my_deck))
@@ -99,6 +100,6 @@ while True:
     elif choice==2:
         stand()
     else:
-        print("Please enter a Valid Choice :")
+        print("Invalid choice!!!")
 
 
