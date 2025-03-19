@@ -29,6 +29,8 @@ def refresh():
         for i in range(2):
             dealer.append(random.choice(list(card.keys())))
             my_deck.append(random.choice(list(card.keys())))
+        print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n  ")
+    
  
 def count_dealer(hand):
     return hand[0]
