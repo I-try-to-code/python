@@ -32,9 +32,12 @@ while gamee:
     snake.move()
     screen.update()
 
+
+
     #detect collision with foodd
     if snake.head.distance(food)<15:
         print("eaten")
+        snake.extend()
         food.eaten()
         scoreb.incr()
 
