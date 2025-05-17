@@ -12,6 +12,8 @@ screen.tracer(0)
 snake=Snake()
 food=Food()
 scoreb=Scoreboard()
+
+
 screen.listen()
 screen.onkey(snake.up,"Up")
 screen.onkey(snake.down,"Down")
@@ -33,6 +35,7 @@ while sta:
     if snake.head.distance(food)<15:
         print("eaten")
         food.eaten()
+        scoreb.incr()
 
 
 

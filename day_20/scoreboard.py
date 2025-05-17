@@ -9,3 +9,13 @@ class Scoreboard(Turtle):
         self.goto(0,270)
         self.hideturtle()
         self.write(f"Score = {self.score}",False,"center",("Calibri",20,"normal"))
+
+    def incr(self):
+        self.clr_scr()
+        self.score+=1
+        self.write(f"Score = {self.score}",False,"center",("Calibri",20,"normal"))
+
+    def clr_scr(self):
+        self.color("Black")
+        self.write(f"Score = {self.score}",False,"center",("Calibri",20,"normal"))
+        self.color("White")
