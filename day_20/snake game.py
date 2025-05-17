@@ -32,7 +32,7 @@ while sta:
 
     if snake.head.distance(food)<15:
         print("eaten")
-        food.eatenn()
+        food.eaten()
 
 
 
