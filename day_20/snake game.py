@@ -26,17 +26,22 @@ screen.onkey(snake.lt,"a")
 screen.onkey(snake.rt,"d")
 
 
-sta=True
-while sta:
+gamee=True
+while gamee:
     time.sleep(0.2)
     snake.move()
     screen.update()
 
+    #detect collision with foodd
     if snake.head.distance(food)<15:
         print("eaten")
         food.eaten()
         scoreb.incr()
 
+    #detect collision with wall
+    if snake.head.xcor()>280 or snake.head.xcor()<-280 or snake.head.ycor()>280 or snake.head.ycor()< -280:
+        scoreb.game_over()
+        gamee=False
 
 
 

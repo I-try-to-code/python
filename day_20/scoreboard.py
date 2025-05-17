@@ -19,3 +19,8 @@ class Scoreboard(Turtle):
         self.color("Black")
         self.write(f"Score = {self.score}",False,"center",("Calibri",20,"normal"))
         self.color("White")
+
+    def game_over(self):
+        self.clr_scr()
+        self.goto(0,0)
+        self.write("GAME OVER", False, "center", ("Calibri", 20, "normal"))
