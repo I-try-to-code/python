@@ -46,6 +46,16 @@ while gamee:
         scoreb.game_over()
         gamee=False
 
+    # detect collision with bodyy
+    for i in snake.segm:
+        if i==snake.head:
+            pass
+        else:
+            if snake.head.distance(i)<10:
+                scoreb.game_over()
+                gamee=False
+
+
 
 
 
