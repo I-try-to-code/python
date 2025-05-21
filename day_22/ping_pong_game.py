@@ -17,10 +17,13 @@ gamee=True
 while gamee:
     time.sleep(0.01)
     ball.move()
-    screen.update()
+
     #detecting collision with paddle
     if ball.ball.distance(pad.pad2)<50 and ball.ball.xcor()>320 or ball.ball.distance(pad.pad1)<50 and ball.ball.xcor()<-320:
         ball.bounce_paddle()
+    screen.update()
+
+
 
 
 
