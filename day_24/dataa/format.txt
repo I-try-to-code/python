@@ -1,0 +1,3 @@
+Hello [name]
+
+I am ayan gattani and i am trying to make a custom mail
