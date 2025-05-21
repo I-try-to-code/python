@@ -43,8 +43,10 @@ while gamee:
 
     #detect collision with wall
     if snake.head.xcor()>280 or snake.head.xcor()<-280 or snake.head.ycor()>280 or snake.head.ycor()< -280:
-        scoreb.game_over()
-        gamee=False
+        scoreb.reset()
+        snake.reset()
+
+
 
     # detect collision with bodyy
     for i in snake.segm:
@@ -52,8 +54,9 @@ while gamee:
             pass
         else:
             if snake.head.distance(i)<10:
-                scoreb.game_over()
-                gamee=False
+                scoreb.reset()
+                snake.reset()
+
 
 
 
