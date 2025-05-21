@@ -1,6 +1,5 @@
 from turtle import Turtle
 positions = [(-350, 0), (350, 0)]
-
 class Paddle:
     def __init__(self):
         self.paddles = []

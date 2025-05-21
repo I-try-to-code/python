@@ -1,6 +1,5 @@
 from turtle import Turtle
 import paddle
-pad = Paddle()
 class Ball:
     def __init__(self):
 
@@ -35,6 +34,9 @@ class Ball:
 
             elif self.x == 10 and self.y == -10:
                 self.y = 10
+
+    def bounce_paddle(self):
+        self.x*=-1
 
 
 
