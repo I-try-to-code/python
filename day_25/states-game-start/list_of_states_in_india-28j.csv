@@ -1,30 +1,29 @@
-﻿State,x,y,,,,,,
-Andhra Pradesh,-33,-116,,,,,,
-Arunachal Pradesh,295,251,,,,,,
-Assam,227,114,,,,,,
-Bihar,196,78,,,,,,
-Chhattisgarh,69,59,,,,,,
-Goa,13,-15,,,,,,
-Gujarat,-115,-106,,,,,,
-Haryana,-129,28,,,,,,
-Himachal Pradesh,-63,120,,,,,,
-Jharkhand,-46,167,,,,,,
-Karnataka,71,28,,,,,,
-Kerala,-89,-125,,,,,,
-Madhya Pradesh,-82,-197,,,,,,
-Maharashtra,-51,27,,,,,,
-Manipur,-97,-43,,,,,,
-Meghalaya,212,54,,,,,,
-Mizoram,174,64,,,,,,
-Nagaland,199,20,,,,,,
-Odisha,220,77,,,,,,
-Punjab,79,-26,,,,,,
-Rajasthan,-79,155,,,,,,
-Sikkim,-94,82,,,,,,
-Tamil Nadu,123,96,,,,,,
-Telangana,-32,-184,,,,,,
-Tripura,-39,-68,,,,,,
-Uttar Pradesh,176,36,,,,,,
-Uttarakhand,3,81,,,,,,
-West Bengal,-24,144,,,,,,
-,123,12,,,,,,
+﻿State,x,y
+Andhra Pradesh,-33,-116
+Arunachal Pradesh,295,251
+Assam,227,114
+Bihar,69,59
+Chhattisgarh,13,-15
+Goa,-115,-106
+Gujarat,-129,28
+Haryana,-63,120
+Himachal Pradesh,-46,167
+Jharkhand,71,28
+Karnataka,-89,-125
+Kerala,-82,-197
+Madhya Pradesh,-51,27
+Maharashtra,-97,-43
+Manipur,212,54
+Meghalaya,174,64
+Mizoram,199,20
+Nagaland,220,77
+Odisha,79,-26
+Punjab,-79,155
+Rajasthan,-94,82
+Sikkim,123,96
+Tamil Nadu,-32,-184
+Telangana,-39,-68
+Tripura,176,36
+Uttar Pradesh,3,81
+Uttarakhand,-24,144
+West Bengal,123,12
