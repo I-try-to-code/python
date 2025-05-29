@@ -20,6 +20,7 @@ LONG_BREAK_MIN = 20
 
 def start_timer():
     countdows(300)
+    # start a timer countdown
 # ---------------------------- COUNTDOWN MECHANISM ------------------------------- #
 def countdows(count):
     count_min= count%60
