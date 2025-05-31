@@ -25,6 +25,10 @@ def start_timer():
 def countdows(count):
     count_min= count%60
     count_max= floor(count/60)
+    if count_min==0:
+        count_min='00'
+    if count_min<10:
+        count_min=f"0{count_min}"
     canvas.itemconfig(timer_text,text=f"{count_max}:{count_min}")
     if count>0:
         window.after(1000,countdows,count-1)
